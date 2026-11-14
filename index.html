@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Hoori ♡</title>
+
+<style>
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: #fff0f4;
+  color: #744b59;
+  overflow-x: hidden;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+#countdownScreen {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: linear-gradient(145deg,#ffe5ed,#fff5f6,#fbd5e3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+}
+
+.countdown-inner { max-width: 420px; }
+
+.countdown-heart {
+  font-size: 65px;
+  animation: heartbeat 1.3s infinite;
+}
+
+#timer {
+  font-size: clamp(38px, 10vw, 65px);
+  color: #d66b91;
+  margin: 22px 0;
+  letter-spacing: 3px;
+}
+
+#website { display: none; }
+
+section {
+  min-height: 90vh;
+  padding: 75px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero {
+  background: linear-gradient(150deg,#ffe3ec,#fff5f7);
+}
+
+h1 {
+  font-size: clamp(38px, 9vw, 65px);
+  color: #cb6488;
+  margin: 12px;
+}
+
+h2 {
+  color: #cb6488;
+  font-size: clamp(28px,7vw,40px);
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 550px;
+}
+
+.doodles {
+  font-size: 65px;
+  margin: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.couple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: 75px;
+  margin: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.heart {
+  color: #ed83a7;
+  animation: heartbeat 1.2s infinite;
+}
+
+.card {
+  background: #fffafb;
+  padding: 30px 24px;
+  border-radius: 25px;
+  box-shadow: 0 8px 30px #d88da522;
+  max-width: 550px;
+  width: 100%;
+  border: 1px solid #f8d3df;
+}
+
+.main-btn {
+  background: #d87598;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 28px;
+  font-size: 16px;
+  margin-top: 22px;
+  box-shadow: 0 5px 15px #d8759844;
+}
+
+.main-btn:hover { background: #bd587e; }
+
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 16px;
+  z-index: 50;
+  background: #d87598;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 17px;
+  box-shadow: 0 4px 15px #0002;
+}
+
+.small {
+  font-size: 14px;
+  color: #a47a89;
+}
+
+footer {
+  padding: 35px 15px;
+  text-align: center;
+  background: #ffe3ec;
+}
+
+.floating {
+  position: absolute;
+  color: #e99bb5;
+  font-size: 24px;
+  animation: float 4s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0) rotate(-4deg); }
+  50% { transform: translateY(-15px) rotate(4deg); }
+}
+
+@keyframes heartbeat {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+.fade {
+  animation: appear 1.2s ease both;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media(max-width:480px) {
+  section { min-height: 85vh; padding: 65px 18px; }
+  p { font-size: 16px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- MIDNIGHT COUNTDOWN -->
+<div id="countdownScreen">
+  <div class="countdown-inner">
+    <div class="countdown-heart">♡</div>
+    <p>A little surprise is waiting for you...</p>
+    <h2>Something special begins in</h2>
+    <div id="timer">00:00:00</div>
+    <p class="small">November 15 · A day made for you ♡</p>
+    <div class="doodles">🌷 🧸 💗 🧸 🌷</div>
+  </div>
+</div>
+
+<!-- BIRTHDAY WEBSITE -->
+<div id="website">
+
+<section class="hero">
+  <span class="floating" style="top:12%;left:10%">♡</span>
+  <span class="floating" style="top:25%;right:10%">✿</span>
+
+  <div class="doodles">🌸 ♡ 🌸</div>
+  <p>A little website made with love...</p>
+  <h1>Happy Birthday,<br>Hoori! ♡</h1>
+
+  <div class="couple">
+    🧸 <span class="heart">♥</span> 🧸
+  </div>
+
+  <p>Today is all about you. You deserve all the happiness in the world.</p>
+
+  <button class="main-btn" onclick="goTo('letter')">
+    Open your surprise ♡
+  </button>
+</section>
+
+<section id="letter">
+  <div class="card fade">
+    <div class="doodles">💌</div>
+    <h2>A letter for you</h2>
+
+    <p>
+      Dear Hoori,
+      <br><br>
+      Happy Birthday to someone truly special.
+      I hope your day is filled with beautiful moments,
+      genuine smiles and all the little things that make
+      your heart happy.
+      <br><br>
+      May this new chapter bring you endless happiness,
+      success, peace and everything you've been wishing for.
+      Never stop being the wonderful person you are.
+      <br><br>
+      You deserve the sweetest things in life.
+      <br><br>
+      With love, ♡
+    </p>
+  </div>
+
+  <button class="main-btn" onclick="goTo('memories')">
+    One more thing →
+  </button>
+</section>
+
+<section id="memories">
+  <div class="doodles">🌷 🧸 🌷</div>
+  <h2>A little collection of happiness</h2>
+
+  <div class="card">
+    <p>
+      Some people make ordinary days feel special.
+      Some smiles make everything a little brighter.
+      And some people deserve their own little corner
+      of happiness.
+    </p>
+    <div style="font-size:45px">🎀 💗 🦋 🌸</div>
+  </div>
+
+  <button class="main-btn" onclick="goTo('wishes')">
+    Read your wishes ♡
+  </button>
+</section>
+
+<section id="wishes">
+  <div class="card">
+    <div class="doodles">🎂</div>
+    <h2>My wishes for you</h2>
+    <p>
+      More reasons to smile.<br>
+      More dreams coming true.<br>
+      More beautiful memories.<br>
+      More peace in your heart.<br>
+      More love than you can imagine.
+    </p>
+    <h2>Keep shining, Hoori! ♡</h2>
+  </div>
+
+  <button class="main-btn" onclick="goTo('final')">
+    Last surprise ✨
+  </button>
+</section>
+
+<section id="final">
+  <div class="doodles">💗 🌷 💗</div>
+  <h1>Happy Birthday!</h1>
+  <div class="couple">🧸 <span class="heart">♥</span> 🧸</div>
+  <p>Made especially for you, with lots of love.</p>
+  <p class="small">You are special. Never forget that. ♡</p>
+  <button class="main-btn" onclick="goTo('top')">
+    Read it again ↑
+  </button>
+</section>
+
+<footer>
+  Made with ♡ just for Hoori
+</footer>
+
+</div>
+
+<!-- MUSIC -->
+<audio id="birthdayMusic" loop preload="auto">
+  <source src="audio/birthday-song.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicButton" class="music-btn" style="display:none"
+onclick="toggleMusic()">♫ Play music</button>
+
+<script>
+const target = Date.UTC(2026, 10, 14, 19, 0, 0);
+const countdown = document.getElementById("countdownScreen");
+const website = document.getElementById("website");
+const timer = document.getElementById("timer");
+const music = document.getElementById("birthdayMusic");
+const musicButton = document.getElementById("musicButton");
+
+let revealed = false;
+
+function revealWebsite() {
+  if (revealed) return;
+  revealed = true;
+
+  countdown.style.display = "none";
+  website.style.display = "block";
+  musicButton.style.display = "block";
+
+  window.scrollTo(0, 0);
+
+  music.play().then(() => {
+    musicButton.textContent = "♫ Pause music";
+  }).catch(() => {
+    musicButton.textContent = "♫ Play music";
+  });
+}
+
+function updateTimer() {
+  const difference = target - Date.now();
+
+  if (difference <= 0) {
+    timer.textContent = "00:00:00";
+    revealWebsite();
+    return;
+  }
+
+  const hours = Math.floor(difference / 3600000);
+  const minutes = Math.floor((difference % 3600000) / 60000);
+  const seconds = Math.floor((difference % 60000) / 1000);
+
+  timer.textContent =
+    String(hours).padStart(2,"0") + ":" +
+    String(minutes).padStart(2,"0") + ":" +
+    String(seconds).padStart(2,"0");
+}
+
+function goTo(id) {
+  if (id === "top") {
+    window.scrollTo({top:0, behavior:"smooth"});
+  } else {
+    document.getElementById(id).scrollIntoView({
+      behavior:"smooth"
+    });
+  }
+}
+
+function toggleMusic() {
+  if (music.paused) {
+    music.play().then(() => {
+      musicButton.textContent = "♫ Pause music";
+    }).catch(() => {
+      musicButton.textContent = "♫ Play music";
+      alert("Please check that your MP3 file is uploaded correctly.");
+    });
+  } else {
+    music.pause();
+    musicButton.textContent = "♫ Play music";
+  }
+}
+
+updateTimer();
+setInterval(updateTimer, 1000);
+</script>
+
+</body>
+</html>
